@@ -70,7 +70,7 @@
 
         <button type="submit" style="width: 70px; height: 30px; margin-left: 40%; background-color: yellow; border-radius: 5px;">OK</button>
     </form>
-
+<!-- 
     @if(isset($user))
         <h3>Thông Tin Đã Nhập:</h3>
         <p>Họ Tên: {{ $user['name'] }}</p>
@@ -79,7 +79,20 @@
         <p>Điện Thoại: {{ $user['phone'] }}</p>
         <p>Website: {{ $user['web'] }}</p>
         <p>Địa Chỉ: {{ $user['address'] }}</p>
-    @endif
+    @endif -->
+    <div>
+        @if(isset($userSession))
+            @foreach($userSession as $user)
+                <h3>Thông Tin User:</h3>
+                <p>Họ Tên: {{ $user['name'] }}</p>
+                <p>Tuổi: {{ $user['age'] }}</p>
+                <p>Ngày Sinh: {{ $user['date'] }}</p>
+                <p>Điện Thoại: {{ $user['phone'] }}</p>
+                <p>Website: {{ $user['web'] }}</p>
+                <p>Địa Chỉ: {{ $user['address'] }}</p>
+            @endforeach
+        @endif
+    </div>
 
 </body>
 </html>
