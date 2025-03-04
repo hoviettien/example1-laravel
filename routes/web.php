@@ -1,22 +1,44 @@
 <?php
-use App\Http\Controllers\ProductController;
-use Illuminate\Support\Facades\Route;
 
-// Route::controller(ProductController::class)
-//     ->name('products.')
-//     ->prefix('products')
-//     ->group(function () {
-//         // Danh sách sản phẩm
-//         Route::get('/', 'index')->name('index');
-//         // Hiển thị form thêm sản phẩm
-//         Route::get('/create', 'create')->name('create');
-//         // Xử lý lưu sản phẩm mới
-//         Route::post('/store', 'store')->name('store');
-//         // Hiển thị form chỉnh sửa sản phẩm
-//         Route::get('/{id}/edit', 'edit')->name('edit');
-//         // Cập nhật sản phẩm
-//         Route::put('/{id}', 'update')->name('update');
-//         // Xóa sản phẩm
-//         Route::delete('/{id}', 'destroy')->name('destroy');
-//     });
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\productsController;
+use App\Http\Controllers\shoppeController;
+use App\Http\Controllers\SingupController;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use Ramsey\Uuid\Type\Decimal;
+use Illuminate\Support\Facades\Schema;
+
+
+
+// Route::get('/form', function () {
+//     return view('teamwork');
+// });
+
+// Route::get('/tien', function () {
+//     return "ngnoagidưkngnoagid";
+// });
+
+// Route::get('/tien', [PostController::class, 'index'] );
+// Route::resource('/post',PostController::class);
+// Route::get('/create', [PostController::class, 'create'] );
+// Route::get('/singup', [SingupController::class, 'index']);
+// Route::post('/formkq', [SingupController::class, 'displayInfor']);
+
 Route::resource('/products',ProductController::class);
+Route::resource('/page',PageController::class);
+Route::resource('/shoppe',shoppeController::class);
+
+
+// route::get('database', function(){
+//     Schema::create('loaisanpham', function($table){
+//         $table -> increments('id');
+//         $table -> string('ten', 200);
+//         $table -> Decimal('price', 10,2);
+//         $table -> string('image');
+//     });
+// echo "thanh cong";
+// });
+
+route::get('/products', [productsController::class, 'index']);
