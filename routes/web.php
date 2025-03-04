@@ -3,6 +3,7 @@
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\productsController;
+use App\Http\Controllers\SchemaController;
 use App\Http\Controllers\shoppeController;
 use App\Http\Controllers\SingupController;
 use Illuminate\Support\Facades\Route;
@@ -42,3 +43,4 @@ Route::resource('/shoppe',shoppeController::class);
 // });
 
 route::get('/products', [productsController::class, 'index']);
+route::get('/schema', [SchemaController::class, 'index']);
