@@ -138,7 +138,7 @@
 	<div class="visible-xs clearfix"></div>		
 	<nav class="main-menu">		
 	<ul class="l-inline ov">		
-	<li><a href="/trangchu">Trang chủ</a></li>		
+	<li><a href="/page">Trang chủ</a></li>		
 	<li><a href="/type/1"> Loại sản phẩm</a>		
 	<ul class="sub-menu">		
 	@foreach($loai_sp as $loai)		
@@ -146,7 +146,7 @@
 	@endforeach		
 	</ul>		
 	</li>		
-	<li><a href="about">Giới thiệu</a></li>		
+	<li><a href="/about">Giới thiệu</a></li>		
 	<li><a href="/contact">Liên hệ</a></li>		
 	</ul>		
 	<div class="clearfix"></div>		

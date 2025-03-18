@@ -119,5 +119,11 @@ public function postAdminEdit(Request $request)
             return $this->getIndexAdmin();
         }
         
-        
+    public function aboutUs(){
+        return view('page.about');
+    }
+
+    public function contact(){
+        return view('page.lienhe');
+    }
 }
